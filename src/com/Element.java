@@ -1,69 +1,66 @@
 package com;
 
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Collections;
+import java.util.*;
 
-public class CustumeOrder implements Comparable<CustumeOrder>{
+public class Element implements Comparable<Element> {
 
-    private String name;
-    private int number;
+    private final String name;
+    private final int priority;
 
-    public CustumeOrder(String name, int number){
+    public Element(String name, int priority) {
         this.name = name;
-        this.number = number;
+        this.priority = priority;
     }
+
     @Override
-    public int compareTo(CustumeOrder o) {
-        return o.getNumber() < this.getNumber() ? 1: -1;
+    public int compareTo(Element e) {
+        return e.getPriority() < this.getPriority() ? 1 : -1;
     }
-    public void getHightestPriorityElement(){
+
+    public void getHightestPriorityElement() {
+
     }
 
     @Override
     public String toString() {
-        return "name='" + this.name  + ", number=" + this.number;
+        return "name = " + this.name + ", priority = " + this.priority;
     }
 
-    public int getNumber() {
-        return number;
+    public int getPriority() {
+        return priority;
     }
 
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
+        Element c1 = new Element("Terje", 5);
+        Element c2 = new Element("Kari", 7);
+        Element c3 = new Element("Nils", 4);
+        Element c4 = new Element("Otto", 8);
+        Element c5 = new Element("Syvert", 7);
+        Element c6 = new Element("lise", 11);
+        Element c7 = new Element("Notto", 0);
+        Element c8 = new Element("Odd", 1);
+        Element c9 = new Element("Even", 2);
 
+        PriorityQueue<Element> elements = new PriorityQueue<>();
+        elements.offer(c1);
+        elements.offer(c2);
+        elements.offer(c3);
+        elements.offer(c4);
+        elements.offer(c5);
+        elements.offer(c6);
+        elements.offer(c7);
+        elements.offer(c8);
+        elements.offer(c9);
 
-        CustumeOrder c1 = new CustumeOrder("Terje", 5);
-        CustumeOrder c2 = new CustumeOrder("Kari", 7);
-        CustumeOrder c3 = new CustumeOrder("Nils", 4);
-        CustumeOrder c4 = new CustumeOrder("Otto", 8);
-        CustumeOrder c5 = new CustumeOrder("Syvert", 7);
-        CustumeOrder c6 = new CustumeOrder("lise", 11);
-        CustumeOrder c7 = new CustumeOrder("Notto", 0);
-        CustumeOrder c8 = new CustumeOrder("Odd", 1);
-        CustumeOrder c9 = new CustumeOrder("Even", 2);
-
-        Queue<CustumeOrder> custumeOrders = new PriorityQueue<>();
-        custumeOrders.offer(c1);
-        custumeOrders.offer(c2);
-        custumeOrders.offer(c3);
-        custumeOrders.offer(c4);
-        custumeOrders.offer(c5);
-        custumeOrders.offer(c6);
-        custumeOrders.offer(c7);
-        custumeOrders.offer(c8);
-        custumeOrders.offer(c9);
-
-        while (!custumeOrders.isEmpty()){
-            System.out.println(custumeOrders.poll());
+        while (!elements.isEmpty()) {
+            System.out.println(elements.poll());
         }
-        CustumeOrder val = null;
-        while ((val = custumeOrders.poll())!= null) {
-            System.out.println(val);
-            System.out.println("halla");
-        }
-        CustumeOrder val2 = Collections.max(custumeOrders);
-        System.out.println(val2);
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9);
+        Queue<Integer> pg = new PriorityQueue<>(Collections.reverseOrder());
+        pg.addAll(list);
+        System.out.println("Prioroty Queue => " + pg);
+        System.out.println("Highest element => " + pg.peek());
     }
 
 
