@@ -2,6 +2,7 @@ package com;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.Collections;
 
 public class CustumeOrder implements Comparable<CustumeOrder>{
 
@@ -29,7 +30,8 @@ public class CustumeOrder implements Comparable<CustumeOrder>{
     }
 
     public static void main(String[] args) {
-	// write your code her
+	// write your code here
+
 
         CustumeOrder c1 = new CustumeOrder("Terje", 5);
         CustumeOrder c2 = new CustumeOrder("Kari", 7);
@@ -60,6 +62,8 @@ public class CustumeOrder implements Comparable<CustumeOrder>{
             System.out.println(val);
             System.out.println("halla");
         }
+        CustumeOrder val2 = Collections.max(custumeOrders);
+        System.out.println(val2);
     }
 
 
