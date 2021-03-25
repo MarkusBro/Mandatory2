@@ -25,7 +25,7 @@ public class Main {
         list.pollLast(); //StackPoll
         list.poll(); //QueuePoll
 
-        System.out.println("Lista etter: ");
+        System.out.println("Lista etter StackPop, QueuePop, StackPop, StackPop, QueuePop: ");
 
         for (int i : list){
             System.out.println(i);
