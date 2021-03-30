@@ -14,15 +14,15 @@ public class ArrayPairSum {
     }
 
 
-    public static void printSumPairs(int []input, int k){
+    public static void printSumPairs(int[] input, int k){
         Map<Integer, Integer> pairs = new HashMap<Integer, Integer>();
 
-        for(int i=0; i<input.length; i++){
+        for (int j : input) {
 
-            if(pairs.containsKey(input[i]))
-                System.out.println(input[i] +", "+ pairs.get(input[i]));
+            if (pairs.containsKey(j))
+                System.out.println(j + ", " + pairs.get(j));
             else
-                pairs.put(k-input[i], input[i]);
+                pairs.put(k - j, j);
         }
 
     }
