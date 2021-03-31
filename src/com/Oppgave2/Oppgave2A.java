@@ -2,7 +2,7 @@ package com;
 
 import java.util.*;
 
-public class SubArray {
+public class Oppgave2A {
 
     public static void main(String[] args) {
 

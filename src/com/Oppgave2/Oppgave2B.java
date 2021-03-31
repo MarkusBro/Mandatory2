@@ -3,7 +3,7 @@ package com;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ArrayPairSum {
+public class Oppgave2B {
 
 
     public static void main(String[] args) {
