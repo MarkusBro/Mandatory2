@@ -1,4 +1,4 @@
-package com;
+package com.Oppgave2;
 
 /*
 Finner

@@ -1,4 +1,4 @@
-package com;
+package com.Oppgave4;
 
 import java.util.*;
 
@@ -15,10 +15,6 @@ public class Element implements Comparable<Element> {
     @Override
     public int compareTo(Element e) {
         return e.getPriority() < this.getPriority() ? 1 : -1;
-    }
-
-    public void getHightestPriorityElement() {
-
     }
 
     @Override
@@ -59,7 +55,6 @@ public class Element implements Comparable<Element> {
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9);
         Queue<Integer> pg = new PriorityQueue<>(Collections.reverseOrder());
         pg.addAll(list);
-        System.out.println("Prioroty Queue => " + pg);
         System.out.println("Highest element => " + pg.peek());
     }
 
